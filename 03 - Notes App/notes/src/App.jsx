@@ -45,6 +45,7 @@ const App = () => {
   const deleteNote = (index) => {
     const updatedNotes = notes.filter((_, i) => i !== index);
     setNotes(updatedNotes);
+    localStorage.setItem('notes', JSON.stringify(updatedNotes))
   };
 
   const editNote = (index) => {
